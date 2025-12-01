@@ -4,11 +4,11 @@ synopsis: "Advent of Code 2025"
 description: "Advent of Code 2025 solutions in OCaml 🐫"
 maintainer: ["Julian Köpke <root@j4nk.dev>"]
 authors: ["Julian Köpke <root@j4nk.dev>"]
-license: "Apache License 2.0"
+license: "LICENSE"
 tags: ["adventofcode"]
-homepage: "https://github.com/j4nk3e/adventofcode2025"
-doc: "https://github.com/j4nk3e/adventofcode2025/blob/main/README.md"
-bug-reports: "https://github.com/j4nk3e/adventofcode2025/issues"
+homepage: "https://github.com/username/reponame"
+doc: "https://url/to/documentation"
+bug-reports: "https://github.com/username/reponame/issues"
 depends: [
   "dune" {>= "3.20"}
   "ocaml"
@@ -28,5 +28,5 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git@github.com:j4nk3e/adventofcode2025.git"
+dev-repo: "git+https://github.com/username/reponame.git"
 x-maintenance-intent: ["(latest)"]
