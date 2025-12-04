@@ -4,6 +4,8 @@ let rec read acc =
     read (line :: acc)
   with End_of_file -> List.rev acc
 
+let parse lines = List.map (fun l -> l) lines
+
 let () =
-  let lines = read [] in
-  List.iter print_endline lines
+  let lines = read [] |> parse in
+  List.iter (fun line -> Printf.printf "%s\n" line) lines
