@@ -14,8 +14,13 @@ let parse lines =
 
 let () =
   let coords = read [] |> parse in
-  List.map
-    (fun (x, y) ->
-      List.map (fun (x', y') -> abs (x - x' + 1) * abs (y - y' + 1)) coords)
-    coords
-  |> List.flatten |> List.fold_left max 0 |> Printf.printf "%d\n"
+  let rectangles =
+    List.map
+      (fun (x, y) ->
+        List.map (fun (x', y') -> abs (x - x' + 1) * abs (y - y' + 1)) coords)
+      coords
+    |> List.flatten |> List.sort compare |> List.rev
+  in
+  let _ = rectangles |> List.hd |> Printf.printf "%d\n" in
+  (* *)
+  rectangles |> List.iter (Printf.printf "%d\n")
